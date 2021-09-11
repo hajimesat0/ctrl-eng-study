@@ -1,0 +1,7 @@
+
+= ctrl-eng-study
+for self-study of control engineering
+
+== 備考
+* ドキュメントはasciidocで記述します。
+
