@@ -2,6 +2,11 @@
 = ctrl-eng-study
 for self-study of control engineering
 
-== 備考
-* ドキュメントはasciidocで記述します。
+== 構成管理
+
+image::docs/imgs/configuration_management.drawio.svg[]
+
+== 運用
+
+link:docs/documentation_rules.adoc[ドキュメント作成ルール]
 
