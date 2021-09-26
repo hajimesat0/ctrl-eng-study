@@ -1,0 +1,54 @@
+= ドキュメント作成ルール
+
+仕様書作成などを想定した場合，Markdownで表現できることが少し心もとなく感じるため，
+AsciiDocでドキュメントを作成していくことにします。
+同時に運用を通じてGitHubで管理する際に考慮すべきことを洗い出していきたいという意図もあります。
+本ドキュメントでは成果物が極力webサイト上からも内容を閲覧できる状態にするための最低限のルールについて記述します。
+
+== AsciiDocファイルのリンク
+
+* linkを使います
+* includeを使っていてもGitHubのwebサイト上で閲覧した際にリンクとして扱われるため
+* README.adocはリポジトリの説明と構成管理説明などにとどめ，実質的な内容は分離することでREADMEの内容が増大することを防止するため
+* AsciiDocでincludeを使えないのは少し残念です
+```
+link:docs/sample.adoc[]
+```
+
+== ソースコードへのリンク
+
+* src以下のファイルへのリンクはlinkを使います
+* 相対パスでリンクすることで，webサイト上でもリンクが成立するため
+* jupyternotebookの場合内容をwebサイト上でも表示してくれます
+```
+link:src/sample.ipynb[]
+```
+
+== 数式
+
+* AsciiDoc上の数式はCODECOGSを利用します
+* AsciiDoc上へ$$などで直接latexを記述してもレンダリングされないようです
+```
+image::https://latex.codecogs.com/gif.latex?\sqrt{4}&space;=&space;2[]
+```
+
+* jupyternotebook上はlatex形式で表現できます
+```
+\begin{equation*}
+\left\{
+\begin{array}{l}
+\dot{x} = Ax+Bu \\
+y = Cx+Du
+\end{array}
+\right.
+\end{equation*}
+```
+
+== 画像
+
+* svg形式のファイルをdraw.ioで編集します
+* svg形式のファイルはそのままimageで参照しておけばwebサイトでも表示されます
+```
+image::docs/imgs/sample.drawio.svg[]
+```
+
