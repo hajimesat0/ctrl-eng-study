@@ -2,8 +2,11 @@
 = ctrl-eng-study
 for self-study of control engineering
 
+== 構成管理
 
-== ドキュメント作成ルール
+image::docs/imgs/configuration_management.drawio.svg[]
 
-link:docs/documentation_rules.adoc[]
+== 運用
+
+link:docs/documentation_rules.adoc[ドキュメント作成ルール]
 
