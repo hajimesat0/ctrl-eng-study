@@ -49,6 +49,6 @@ y = Cx+Du
 * svg形式のファイルをdraw.ioで編集します
 * svg形式のファイルはそのままimageで参照しておけばwebサイトでも表示されます
 ```
-image::docs/img/sample.drawio.svg[]
+image::docs/imgs/sample.drawio.svg[]
 ```
 
