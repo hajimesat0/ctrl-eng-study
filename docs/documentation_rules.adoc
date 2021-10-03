@@ -1,38 +1,38 @@
-= ドキュメント作成ルール
+= GitHubで管理するAsciiDoc文書について
 
-仕様書作成などを想定した場合，Markdownで表現できることが少し心もとなく感じるため，
-AsciiDocでドキュメントを作成していくことにします。
-同時に運用を通じてGitHubで管理する際に考慮すべきことを洗い出していきたいという意図もあります。
-本ドキュメントでは成果物が極力webサイト上からも内容を閲覧できる状態にするための最低限のルールについて記述します。
+仕様書作成などを想定した場合、Markdownで表現できることが少し心もとなく感じるため，
+AsciiDocでドキュメントを作成することを検討しました。
+
+しかし、GitHubにアップロードされたドキュメントをwebから閲覧するとオフラインで生成されるものと差が生じるようなので、webから閲覧できるドキュメントを作成するために気を付けるべきコトとその対処法についてまとめます。
 
 == AsciiDocファイルのリンク
 
-* linkを使います
-* includeを使っていてもGitHubのwebサイト上で閲覧した際にリンクとして扱われるため
-* README.adocはリポジトリの説明と構成管理説明などにとどめ，実質的な内容は分離することでREADMEの内容が増大することを防止するため
-* AsciiDocでincludeを使えないのは少し残念です
+* includeを使っていてもGitHubのwebサイト上で閲覧するとリンクとして扱われてしまうので、いさぎよくlinkにしてしまうとよいかと思います。
+* linkを使わずREADME.adocへ全ての内容を記述してしまうのも一案ですが、1ファイルの内容が肥大化してしまいメンテナンスしづらくなる気がするので適宜linkを使いましょう。README.adocはリポジトリの説明と構成管理説明などにとどめておくつもりです。
+* includeを使えないのは残念です。
 ```
 link:docs/sample.adoc[]
 ```
 
 == ソースコードへのリンク
 
-* src以下のファイルへのリンクはlinkを使います
-* 相対パスでリンクすることで，webサイト上でもリンクが成立するため
-* jupyternotebookの場合内容をwebサイト上でも表示してくれます
+* src以下のファイルは相対パスでlinkを使うとadocファイル以外でもリンクできます。
+* jupyternotebookの場合、数式や組み込んだsvgも合わせてwebサイト上で閲覧できます。
 ```
 link:src/sample.ipynb[]
 ```
 
 == 数式
 
-* AsciiDoc上の数式はCODECOGSを利用します
-* AsciiDoc上へ$$などで直接latexを記述してもレンダリングされないようです
+* AsciiDoc上の数式はCODECOGSを利用します。
+* AsciiDoc上へ$$などで直接latexを記述してもレンダリングされないようです。
+* しかしCODECOGSも最新版はURLを吐いてくれない気がします。
 ```
 image::https://latex.codecogs.com/gif.latex?\sqrt{4}&space;=&space;2[]
 ```
 
-* jupyternotebook上はlatex形式で表現できます
+* jupyternotebook上はlatex形式で表現できます。
+* 複数の式を並べる場合等では\$$～$$で囲うだけだと上手くレンダリングされないことがあるようです。
 ```
 \begin{equation*}
 \left\{
@@ -46,8 +46,8 @@ y = Cx+Du
 
 == 画像
 
-* svg形式のファイルをdraw.ioで編集します
-* svg形式のファイルはそのままimageで参照しておけばwebサイトでも表示されます
+* svg形式のファイルをdraw.ioで編集します。*.drawio.svgの拡張子にしておきます。
+* svg形式のファイルはそのままimageで参照しておけばwebサイトでも表示されます。
 ```
 image::docs/imgs/sample.drawio.svg[]
 ```

@@ -6,7 +6,7 @@ for self-study of control engineering
 
 image::docs/imgs/configuration_management.drawio.svg[]
 
-== 運用
+== 補足
 
-link:docs/documentation_rules.adoc[ドキュメント作成ルール]
+link:docs/documentation_rules.adoc[GitHubで管理するAsciiDoc文書について]
 
