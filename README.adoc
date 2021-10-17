@@ -6,6 +6,7 @@ for self-study of control engineering
 == 目次
 
 * link:src\topic_初期値応答\initial_value_response.ipynb[初期値応答]
+* link:src\topic_2自由度制御\two_degrees_of_freedom_control.ipynb[2自由度制御]
 
 == 構成管理
 
