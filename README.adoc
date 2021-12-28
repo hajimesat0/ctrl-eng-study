@@ -3,6 +3,21 @@
 
 for self-study of control engineering
 
+== 実行環境
+
+* Ubuntu 20.04.3 LTS ( on WSL2 )
+* Docker 20.10.11, build dea9396
+
+== 実行手順
+
+1. docker_build.shを実行(初回に1度だけ)
+  * jupyterlab環境を構築
+1. docker_run.shを実行
+  * jupyterlabサーバーを起動
+1. link:http://localhost:8888[]をブラウザで開く
+
+
+
 == 目次
 
 * link:src\topic_初期値応答\initial_value_response.ipynb[初期値応答]
