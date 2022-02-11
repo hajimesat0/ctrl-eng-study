@@ -10,9 +10,9 @@ for self-study of control engineering
 
 == 実行手順
 
-1. docker_build.shを実行(初回に1度だけ)
+1. docker_build.shを実行(dockerイメージを作成・更新する度に実行)
   * jupyterlab環境を構築
-1. docker_run.shを実行
+1. docker_run.shを実行(dockerコンテナを起動する度に実行)
   * jupyterlabサーバーを起動
 1. link:http://localhost:8888[]をブラウザで開く
 
