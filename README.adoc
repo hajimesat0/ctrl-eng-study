@@ -22,6 +22,8 @@ for self-study of control engineering
 
 * link:src\topic_初期値応答\initial_value_response.ipynb[初期値応答]
 * link:src\topic_2自由度制御\two_degrees_of_freedom_control.ipynb[2自由度制御]
+* link:src\topic_回転型2重倒立振子モデル\回転型2重倒立振子モデル.ipynb[回転型2重倒立振子モデル]
+* link:src\topic_台車型倒立振子モデル\台車型倒立振子モデル.ipynb[台車型倒立振子モデル]
 * link:src\topic_LMIと制御\LMIと制御.ipynb[LMIと制御]
 
 == 構成管理
