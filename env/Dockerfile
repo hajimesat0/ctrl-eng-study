@@ -35,7 +35,8 @@ RUN pip install --no-cache-dir \
     beautifulsoup4 \
     Pillow \
     opencv-python \
-    control
+    control \
+    sympy
 
 ENTRYPOINT jupyter-lab \
       --allow-root \
